@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&display=swap");
+:root {
+  --basic: #50abd4;
+  --standard: #f5d938;
+  --premiuim: #e83f3c;
+  --dark-bg: #2b2727;
+  --box: #1c1b1b;
+}
+* {
+  padding: 0%;
+  margin: 0%;
+  text-transform: uppercase;
+  text-decoration: none;
+  list-style: none;
+}
+/*Dark-mode-start*/
+.dark-mode {
+  background-color: var(--dark-bg);
+}
+.dark-mode .box-container .box {
+  background-color: var(--box);
+}
+.dark-mode .box-container .box ul li {
+  color: #fff;
+}
+/*Dark-mode-end*/
+.box-container {
+  font-family: "Nunito";
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+.box-container .box {
+  text-align: center;
+  width: 250px;
+  height: 400px;
+  padding: 20px 10px;
+  border-radius: 10px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+.box-container .box::after,
+.box-container .box::before {
+  content: "";
+  width: 170px;
+  height: 170px;
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.6;
+}
+.box-container .box::before {
+  background-color: #f0f0f0;
+  top: -10%;
+  left: 80%;
+}
+.box-container .box::after {
+  background-color: var(--basic);
+  bottom: -10%;
+  right: 80%;
+}
+.box-container .standard::after {
+  background-color: var(--standard);
+}
+.box-container .premium::after {
+  background-color: var(--premiuim);
+}
+.box-container .box h3 {
+  font-weight: 900;
+  color: var(--basic);
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+.box-container .standard h3 {
+  color: var(--standard);
+}
+.box-container .premium h3 {
+  color: var(--premiuim);
+}
+.box-container .box .price {
+  background-color: var(--basic);
+  border-radius: 50%;
+  color: white;
+  width: 160px;
+  align-items: center;
+  margin: 0 auto 25px;
+  padding: 50px 0;
+}
+.box-container .standard .price {
+  background-color: var(--standard);
+}
+.box-container .premium .price {
+  background-color: var(--premiuim);
+}
+.box-container .box .price .symbol {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.box-container .box .price .amount {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+.box-container .box .price .duration {
+  margin-left: -5px;
+  letter-spacing: 0.1rem;
+}
+.box-container .box ul li::before {
+  content: "✓";
+  padding-right: 0.4rem;
+  font-weight: 900;
+  color: var(--basic);
+}
+.box-container .standard ul li::before {
+  color: var(--standard);
+}
+.box-container .premium ul li::before {
+  color: var(--premiuim);
+}
+.box-container .box ul {
+  padding-bottom: 20px;
+}
+.box-container .box ul li {
+  margin: 5px 0;
+  text-align: left;
+  padding-left: 3rem;
+  font-size: 15px;
+  color: #666;
+}
+.box-container .box .btn {
+  border-radius: 20px;
+  border: 1px solid var(--basic);
+  color: var(--basic);
+  font-size: 14px;
+  font-weight: 700;
+  padding: 5px 20px;
+  transition: 0.2s ease-out;
+}
+.box-container .standard .btn {
+  color: var(--standard);
+  border: 1px solid var(--standard);
+}
+.box-container .premium .btn {
+  color: var(--premiuim);
+  border: 1px solid var(--premiuim);
+}
+.box-container .box .btn:hover {
+  background: var(--basic);
+  color: white;
+}
+.box-container .standard .btn:hover {
+  background-color: var(--standard);
+}
+.box-container .premium .btn:hover {
+  background-color: var(--premiuim);
+}
